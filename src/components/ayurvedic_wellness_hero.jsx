@@ -605,7 +605,7 @@ export default function AyurvedicHero() {
       </nav>
 
       {}
-      <section id="home" className="relative pt-44 lg:pt-52 pb-24 px-6 md:px-12 max-w-7xl mx-auto min-h-screen flex flex-col justify-center overflow-hidden z-10">
+      <section id="home" className="relative pt-36 lg:pt-44 pb-24 px-6 md:px-12 max-w-7xl mx-auto min-h-screen flex flex-col justify-center overflow-hidden z-10">
         
         {/* Abstract Cinematic Glows */}
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-[#C89B3C]/10 to-transparent filter blur-[150px] pointer-events-none" />
@@ -614,7 +614,7 @@ export default function AyurvedicHero() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
           
           {/* Left Text Block */}
-          <div className="lg:col-span-7 space-y-8 text-left">
+          <div className="lg:col-span-7 space-y-4 text-left">
             
             {/* Top Badge */}
             <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
@@ -624,7 +624,7 @@ export default function AyurvedicHero() {
 
             {/* Typography Master Heading */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif-lux tracking-tight text-[#F8F5F0] leading-[1.05]">
+              <h1 className="text-5xl md:text-7xl lg:text-6xl font-serif-lux tracking-tight text-[#F8F5F0] leading-[1.05]">
                 Ancient Ayurveda. <br />
                 <span className="italic text-[#E7D8C9] font-normal font-serif-lux">Modern</span> <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#F8F5F0] via-[#E7D8C9] to-[#C89B3C]">Healing.</span>
               </h1>
@@ -1477,7 +1477,7 @@ export default function AyurvedicHero() {
                       <div className="space-y-1 text-left">
                         <span className="text-[10px] text-[#C89B3C] uppercase tracking-wider">{item.subtitle}</span>
                         <h4 className="text-sm font-semibold text-white">{item.title}</h4>
-                        <span className="text-xs text-[#E7D8C9]">${item.price.toFixed(2)}</span>
+                        <span className="text-xs text-[#E7D8C9]">₹{item.price.toFixed(2)}</span>
                       </div>
                       
                       {/* Qty selectors */}
@@ -1506,7 +1506,7 @@ export default function AyurvedicHero() {
                 <div className="border-t border-white/5 pt-6 space-y-6">
                   <div className="flex justify-between items-center text-sm font-semibold text-white">
                     <span>Valued Acquisition</span>
-                    <span className="text-lg">${cartTotal.toFixed(2)}</span>
+                    <span className="text-lg">₹{cartTotal.toFixed(2)}</span>
                   </div>
                   <button 
                     onClick={() => { alert("Proceeding to secure clinical payment checkout."); setCartOpen(false); }}
