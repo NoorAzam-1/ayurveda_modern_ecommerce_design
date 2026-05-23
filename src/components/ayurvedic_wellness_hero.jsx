@@ -129,6 +129,7 @@ export default function AyurvedicHero() {
   const [likedProducts, setLikedProducts] = useState({});
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  console.log("isMobileMenuOpen",isMobileMenuOpen)
 
   // Audio Context references for Zen Ambient Synthesizer
   const audioCtxRef = useRef(null);
@@ -506,17 +507,17 @@ export default function AyurvedicHero() {
           ? 'py-4 bg-[#18392B]/85 backdrop-blur-2xl border-b border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.3)]' 
           : 'py-6 bg-transparent border-b border-white/0'
       }`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-2">
           
           {/* Logo Brand Title */}
-          <div className="flex items-center space-x-3 group cursor-pointer">
-            <div className="relative w-11 h-11 flex items-center justify-center rounded-full border border-[#C89B3C]/50 group-hover:border-[#C89B3C] transition-all duration-500 bg-[#18392B]/70 overflow-hidden">
-              <span className="font-serif-lux text-xl text-[#C89B3C] group-hover:scale-110 transition-transform duration-500">W</span>
+          <div className="flex items-center space-x-1 md:space-x-3 group cursor-pointer">
+            <div className="relative w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full border border-[#C89B3C]/50 group-hover:border-[#C89B3C] transition-all duration-500 bg-[#18392B]/70 overflow-hidden">
+              <span className="font-serif-lux text-md md:text-xl text-[#C89B3C] group-hover:scale-110 transition-transform duration-500">W</span>
               <div className="absolute inset-0.5 border border-white/10 rounded-full scale-90 group-hover:scale-100 transition-transform duration-500" />
             </div>
             <div>
-              <span className="font-serif-lux text-2xl tracking-[0.15em] text-[#F8F5F0] block">Wellnesstillulast</span>
-              <span className="text-[9px] tracking-[0.35em] text-[#C89B3C] uppercase block font-sans-lux font-semibold">Ayurvedic Apothecary</span>
+              <span className="font-serif-lux text-md md:text-2xl tracking-[0.15em] text-[#F8F5F0] block">Wellnesstillulast</span>
+              <span className="text-[7px] md:text-[9px] tracking-[0.35em] text-[#C89B3C] uppercase block font-sans-lux font-semibold">Ayurvedic Apothecary</span>
             </div>
           </div>
 
@@ -535,18 +536,16 @@ export default function AyurvedicHero() {
           </div>
 
           {/* Call-to-action Elements */}
-          <div className="flex items-center space-x-4">
-            
+          <div className="flex items-center space-x-2 md:space-x-4">      
            
-
             {/* Cart Trigger */}
             <button 
               onClick={() => setCartOpen(true)}
-              className="p-3 rounded-full border border-white/10 hover:border-[#C89B3C]/40 hover:bg-[#C89B3C]/5 text-[#E7D8C9] transition-all duration-300 relative"
+              className="p-2 md:p-3 rounded-full border border-white/10 hover:border-[#C89B3C]/40 hover:bg-[#C89B3C]/5 text-[#E7D8C9] transition-all duration-300 relative"
             >
               <ShoppingBag className="w-4 h-4" />
               {cartItems.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#B65E3C] text-white font-bold text-[9px] w-5 h-5 flex items-center justify-center rounded-full border border-[#18392B]">
+                <span className="absolute -top-1 -right-1 bg-[#B65E3C] text-white font-bold text-[7px] md:text-[9px] w-5 h-5 flex items-center justify-center rounded-full border border-[#18392B]">
                   {cartItems.reduce((acc, i) => acc + i.qty, 0)}
                 </span>
               )}
@@ -564,9 +563,9 @@ export default function AyurvedicHero() {
             {/* Mobile Menu Icon */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-3 rounded-full border border-white/10 hover:border-[#C89B3C]/40 text-[#E7D8C9]"
+              className="lg:hidden p-2 md:p-3 rounded-full border border-white/10 hover:border-[#C89B3C]/40 text-[#E7D8C9]"
             >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Plus className="w-5 h-5 rotate-45" />}
+              {isMobileMenuOpen ? <Plus className="w-4 h-4 md:w-5 md:h-5" /> : <Plus className="w-4 h-4 md:w-5 md:h-5 rotate-45" />}
             </button>
 
           </div>
