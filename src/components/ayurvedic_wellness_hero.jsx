@@ -565,7 +565,7 @@ export default function AyurvedicHero() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 md:p-3 rounded-full border border-white/10 hover:border-[#C89B3C]/40 text-[#E7D8C9]"
             >
-              {isMobileMenuOpen ? <Plus className="w-4 h-4 md:w-5 md:h-5" /> : <Plus className="w-4 h-4 md:w-5 md:h-5 rotate-45" />}
+              {!isMobileMenuOpen ? <Plus className="w-4 h-4 md:w-5 md:h-5" /> : <Plus className="w-4 h-4 md:w-5 md:h-5 rotate-45" />}
             </button>
 
           </div>
